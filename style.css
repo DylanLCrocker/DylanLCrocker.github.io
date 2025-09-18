@@ -1,0 +1,37 @@
+html{
+    --text: #000000;
+    --background: #ffffff;
+    --primary: #79fbd0;
+    --secondary: #ff9da5;
+    --accent: #ff57ae;
+}
+
+body{
+    color: var(--text);
+    background: var(--background);
+}
+
+h1,
+h2,
+h3{
+    color: var(--accent);
+}
+
+ul,
+ol{
+    color: var(--secondary)
+}
+
+p{
+    color: var(--text);
+}
+
+img{
+    padding: 2px;
+    border: 8px solid var(--primary);
+    border-radius: 8px;
+}
+
+adiuo{
+    background: var (--background);
+}
