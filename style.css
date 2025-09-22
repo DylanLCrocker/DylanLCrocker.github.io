@@ -15,15 +15,18 @@ h1,
 h2,
 h3{
     color: var(--accent);
+    font-family: "fugaz one"
 }
 
 ul,
 ol{
     color: var(--secondary)
+    font-family: "lexend"
 }
 
 p{
     color: var(--text);
+    font-family: "lexend"
 }
 
 img{
@@ -32,6 +35,6 @@ img{
     border-radius: 8px;
 }
 
-adiuo{
+audio{
     background: var (--background);
 }
