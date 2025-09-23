@@ -1,4 +1,4 @@
-html{
+html {
     --text: #000000;
     --background: #ffffff;
     --primary: #79fbd0;
@@ -6,35 +6,45 @@ html{
     --accent: #ff57ae;
 }
 
-body{
+body {
     color: var(--text);
     background: var(--background);
 }
 
 h1,
 h2,
-h3{
+h3 {
     color: var(--accent);
-    font-family: "fugaz one"
+    font-family: "fugaz one";
+    font-variant: small-caps;
+    font-weight: 100;
+    font-style: oblique;
+    text-decoration: underline;
+}
+ul {
+    text-decoration: wavy underline;
 }
 
 ul,
-ol{
-    color: var(--secondary)
-    font-family: "lexend"
+ol {
+    color: var(--secondary);
+    font-family: "lexend";
+    font-variant: small-caps;
+
 }
 
-p{
+p {
     color: var(--text);
-    font-family: "lexend"
+    font-family: "lexend";
+    font-weight: 200;
 }
 
-img{
+img {
     padding: 2px;
     border: 8px solid var(--primary);
     border-radius: 8px;
 }
 
-audio{
+audio {
     background: var (--background);
 }
