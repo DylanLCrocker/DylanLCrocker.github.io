@@ -1,10 +1,10 @@
 * {
-    border: 1px solid red;
+    border: 1px solid re
 }
 
 html {
-    --text: #000000;
-    --background: #ffffff;
+    --text: #ffffff;
+    --background: #000000;
     --primary: #79fbd0;
     --secondary: #ff9da5;
     --accent: #ff57ae;
