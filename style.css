@@ -10,6 +10,10 @@ html {
     --accent: #ff57ae;
 }
 
+*{
+
+}
+
 ul,
 li {
     color: var(--accent)
