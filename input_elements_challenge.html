@@ -39,11 +39,11 @@
         <h2>Part 1: Text and Number Inputs</h2>
         <label>
             Name:
-            <input id="nameInput" type="text" placeholder="Enter your name">
+            <input id="nameInput" type="text" placeholder="Enter your name here">
         </label>
         <label>
             Age:
-            <input id="ageInput" type="number" min="0" max="120">
+            <input id="ageInput" type="number" placeholder="Enter your age here">
         </label>
         <button id="btnGreet">Greet Me</button>
         <div class="output" id="greetingOutput"></div>
@@ -81,9 +81,9 @@
         const greetingOutput = document.getElementById("greetingOutput");
 
         btnGreet.addEventListener("click", () => {
-        let age = ageInput.Value;
-        let name = nameInput.Value;
-        greetingOutput.innerText = "Hi " + name + " you are " + age + " years old!";
+            let age = ageInput.value;
+            let name = nameInput.value;
+            greetingOutput.innerText = "Hi " + name + " you are " + age + " years old!";
             // TODO: Display a message like "Hello NAME, you are AGE years old!"
             // Challenge: If age < 13, show "You're just a kid!" instead.
         });
@@ -92,9 +92,10 @@
         const colorInput = document.getElementById("colorInput");
         const volumeInput = document.getElementById("volumeInput");
         const colorOutput = document.getElementById("colorOutput");
-        
-        colorInput.addEventListener("click", () => {
-            window.style.backgroundColor = colorInput.Value
+
+        colorInput.addEventListener("change", () => {
+        colorOutput.style.backgroundColor = colorImput.value
+        colorOutput.textContent = "volumeInput" + "colorimput"
         });
         // TODO: Update the background color of colorOutput whenever the color input changes.
         // Challenge: Also display the hex code and volume value dynamically.
@@ -103,11 +104,20 @@
         const subscribeBox = document.getElementById("subscribeBox");
         const btnSubmit = document.getElementById("btnSubmit");
         const modeOutput = document.getElementById("modeOutput");
+        colorOutput.textContent = "test"
 
         btnSubmit.addEventListener("click", () => {
-            // TODO: Find which radio button is checked and display it.
-            // Challenge: Include whether the user subscribed or not.
-        });
+            if (age) {
+                console.log("idk bro")
+            }
+            if (age) {
+                console.log("idk bro")
+            }
+            else if{
+                console.log("idk bro")
+            });
+        // TODO: Find which radio button is checked and display it.
+        // Challenge: Include whether the user subscribed or not.
     </script>
 </body>
 
