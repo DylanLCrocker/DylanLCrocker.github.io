@@ -66,9 +66,9 @@
         <h2>Part 3: Checkbox and Radio Buttons</h2>
         <label><input type="checkbox" id="subscribeBox"> Subscribe to newsletter</label>
         <p>Pick a mode:</p>
-        <label><input type="radio" name="mode" value="Light"> Light</label>
-        <label><input type="radio" name="mode" value="Dark"> Dark</label>
-        <label><input type="radio" name="mode" value="System" checked> System</label>
+        <label><input type="radio" name="mode" id="darkMode" value="Light"> Light</label>
+        <label><input type="radio" name="mode" id="lightMode" value="Dark"> Dark</label>
+        <label><input type="radio" name="mode" id="systemMode" value="System" checked> System</label>
         <button id="btnSubmit">Submit</button>
         <div class="output" id="modeOutput"></div>
     </section>
@@ -83,7 +83,11 @@
         btnGreet.addEventListener("click", () => {
             let age = ageInput.value;
             let name = nameInput.value;
-            greetingOutput.innerText = "Hi " + name + " you are " + age + " years old!";
+            greetingOutput.textContent = "Hi " + name + ", you are " + age + " years old!";
+           
+           if(age < 13){
+            greetingOutput.textContent = "You're just a kid!"
+           }
             // TODO: Display a message like "Hello NAME, you are AGE years old!"
             // Challenge: If age < 13, show "You're just a kid!" instead.
         });
@@ -92,11 +96,23 @@
         const colorInput = document.getElementById("colorInput");
         const volumeInput = document.getElementById("volumeInput");
         const colorOutput = document.getElementById("colorOutput");
+        let color = colorInput.value;
+        let volume = volumeInput.value;
+        colorOutput.textContent = "What is your favorive color?"
+    
+            colorInput.addEventListener("input", () => {
+            let color = colorInput.value;
+            let volume = volumeInput.value;
+            colorOutput.style.backgroundColor = color;
+            colorOutput.textContent = "color: " + color + ", volume: " + volume;
+           });
+             volumeInput.addEventListener("input", () => {
+            let color = colorInput.value;
+            let volume = volumeInput.value;
+            colorOutput.style.backgroundColor = color;
+            colorOutput.textContent = "color" + color + ", volume" + volume;
+           });
 
-        colorInput.addEventListener("change", () => {
-        colorOutput.style.backgroundColor = colorImput.value
-        colorOutput.textContent = "volumeInput" + "colorimput"
-        });
         // TODO: Update the background color of colorOutput whenever the color input changes.
         // Challenge: Also display the hex code and volume value dynamically.
 
@@ -104,18 +120,23 @@
         const subscribeBox = document.getElementById("subscribeBox");
         const btnSubmit = document.getElementById("btnSubmit");
         const modeOutput = document.getElementById("modeOutput");
-        colorOutput.textContent = "test"
+        const lightMode = document.getElementById("lightMode");
+        const darkMode = document.getElementById("darkMode");
+        const systemMode = document.getElementById("systemMode");
 
         btnSubmit.addEventListener("click", () => {
-            if (age) {
-                console.log("idk bro")
+            if(lightMode.checked){    
+            document.body.style.backgroundColor = "black"
+            document.body.style.color = "white"
             }
-            if (age) {
-                console.log("idk bro")
+            if(darkMode.checked){
+            document.body.style.backgroundColor = "white"
+            document.body.style.color = "black"
             }
-            else if{
-                console.log("idk bro")
-            });
+            else if(true){
+            console.log("change to system mode") 
+            }
+        });
         // TODO: Find which radio button is checked and display it.
         // Challenge: Include whether the user subscribed or not.
     </script>
