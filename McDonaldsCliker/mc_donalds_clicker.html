@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mc Donald's Clicker</title>
+    <link rel="stylesheet" href="mc_donalds.css">
+</head>
+
+<body>
+    <H1>McDonald's Clicker</H1>
+    <img id="bigMacClickerBigMac" src="bigmac.png">
+
+    <h2 id="burgerCount">Burgers: 0</h2>
+    <h2 id="burgersPerSecondText">0</h2>
+    <h2 id="burgersPerClickText">BPC: 1</h2>
+    <h2 id="totalBurgerCount">Total Burgers Made: 0</h2>
+
+
+    <section id="allUpgrades">
+        <button>
+            <h3 id="badPaperStrawMachine">150$ Paper Straw Machine: +1 BPS</h3>
+        </button>
+        <button>
+            <h3 id="paperStraw">200$ Paper Straw: +1 BPC</h3>
+        </button>
+        <br>
+        <button>
+            <h3 id="deepFrier">500$ Deep Frier: +5 BPS</h3>
+        </button>
+        <button>
+            <h3 id="bagFries">750$ Bottom Of The Bag Fries: +5 BPC</h3>
+        </button>
+        <br>
+        <button>
+            <h3 id="brokenIceCreamMachine">2,000$ Broken Ice Cream Machine: +25 BPS</h3>
+        </button>
+        <button>
+            <h3 id="iceCream">2,500$ Ice Cream: +25 BPC</h3>
+        </button>
+        <br>
+        <button>
+            <h3 id="sodaFountain">7,500$ Soda Fountain: +100 BPS</h3>
+        </button>
+        <button>
+            <h3 id="waterCup">"8,000$ For Sure a Water Cup": +100 BPC</h3>
+        </button>
+        <br>
+        <button>
+            <h3 id="lazyBob">15,000$ Lazy Bob: +250 BPS</h3>
+        </button>
+        <button>
+            <h3 id="tipForBob">17,500$ A Tip for Bob: +250 BPC</h3>
+        </button>
+        <br>
+        <button>
+            <h3 id="playPlace">50,000$ Play Place: +1000 BPS</h3>
+        </button>
+        <button>
+            <h3 id="handSanitizer">50,000$ Hand Sanitizer: +1000 BPC</h3>
+        </button>
+        <br>
+    </section>
+
+    <script>
+        const bigMacClickerBigMac = document.getElementById("bigMacClickerBigMac");
+
+        const badPaperStrawMachine = document.getElementById("badPaperStrawMachine");
+        const deepFrier = document.getElementById("deepFrier");
+        const brokenIceCreamMachine = document.getElementById("brokenIceCreamMachine");
+        const sodaFountain = document.getElementById("sodaFountain");
+        const lazyBob = document.getElementById("lazyBob");
+        const playPlace = document.getElementById("playPlace");
+
+        const paperStraw = document.getElementById("paperStraw");
+        const bagFries = document.getElementById("bagFries");
+        const iceCream = document.getElementById("iceCream");
+        const waterCup = document.getElementById("waterCup");
+        const tipForBob = document.getElementById("tipForBob");
+        const handSanitizer = document.getElementById("handSanitizer");
+
+        const burgerCount = document.getElementById("burgerCount");
+        const totalBurgerCount = document.getElementById("totalBurgerCount");
+        const burgersPerClickText = document.getElementById("burgersPerClickText");
+        const burgersPerSecondText = document.getElementById("burgersPerSecondText");
+
+
+
+        let BPC = 1
+        let burgers = 0
+        let totalBurgersMade = 0
+        let BPS = 0
+
+           burgersPerSecondText.textContent = "BPS: " + BPS;
+           
+        function updateAllStats() {
+            burgerCount.textContent = "Burgers: " + burgers;
+            totalBurgerCount.textContent = "Total Burgers Made: " + totalBurgersMade;
+            burgersPerSecondText.textContent = "BPS: " + BPS;
+            burgersPerClickText.textContent = "BPC: " + BPC;
+        }
+
+        function bigMacClicked() {
+            burgers += BPC;
+            totalBurgersMade += BPC;
+            updateAllStats()
+        }
+
+
+        function addBurgersPerSecond() {
+            burgers += BPS;
+            totalBurgersMade += BPS;
+            updateAllStats()
+        }
+        const intervalId = setInterval(addBurgersPerSecond, 1000);
+
+        bigMacClickerBigMac.addEventListener("click", () => {
+            bigMacClicked()
+        });
+
+        badPaperStrawMachine.addEventListener("click", () => {
+            if (burgers > -1) {
+                burgers += -150;
+                BPS += 1;
+                updateAllStats()
+            }
+        });
+
+        deepFrier.addEventListener("click", () => {
+            if (burgers > 499) {
+                burgers += -500;
+                BPS += 5;
+                updateAllStats();
+            }
+        });
+
+        brokenIceCreamMachine.addEventListener("click", () => {
+            if (burgers > 1999) {
+                burgers += -2000
+                BPS += 25
+                updateAllStats();
+            }
+        });
+
+        sodaFountain.addEventListener("click", () => {
+            if (burgers > 7499) {
+                burgers += -7500
+                BPS += 100
+                updateAllStats();
+            }
+
+        });
+        lazyBob.addEventListener("click", () => {
+            if (burgers > 14999) {
+                burgers += -15000
+                BPS += 250
+                updateAllStats();
+            }
+        });
+
+        playPlace.addEventListener("click", () => {
+            if (burgers > 49999) {
+                burgers += -50000
+                BPS += 1000
+                updateAllStats();
+            }
+        });
+        
+
+
+        paperStraw.addEventListener("click", () => {
+            if (burgers > 199) {
+                burgers += -200
+                BPC += 1;
+                updateAllStats()
+            }
+        });
+
+        bagFries.addEventListener("click", () => {
+            if (burgers > 749) {
+                burgers += -750
+                BPC += 5;
+                updateAllStats();
+            }
+        });
+
+        iceCream.addEventListener("click", () => {
+            if (burgers > 2499) {
+                burgers += -2500
+                BPC += 25;
+                updateAllStats();
+            }
+        });
+
+        waterCup.addEventListener("click", () => {
+            if (burgers > 799) {
+                burgers += -800;
+                BPC += 100;
+                updateAllStats();
+            }
+
+        });
+        tipForBob.addEventListener("click", () => {
+            if (burgers > 17499) {
+                burgers += -17500;
+                BPC += 250;
+                updateAllStats();
+            }
+        });
+
+        handSanitizer.addEventListener("click", () => {
+            if (burgers > 49999) {
+                burgers += -50000
+                BPC += 1000;
+                updateAllStats();
+            }
+        });
+
+
+    </script>
+</body>
+
+</html>
