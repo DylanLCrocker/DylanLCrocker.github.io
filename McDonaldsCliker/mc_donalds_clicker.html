@@ -62,6 +62,7 @@
         </button>
         <br>
     </section>
+    <a href="../index.html">HOME(will reset progress)</a>
 
     <script>
         const bigMacClickerBigMac = document.getElementById("bigMacClickerBigMac");
@@ -92,8 +93,8 @@
         let totalBurgersMade = 0
         let BPS = 0
 
-           burgersPerSecondText.textContent = "BPS: " + BPS;
-           
+        burgersPerSecondText.textContent = "BPS: " + BPS;
+
         function updateAllStats() {
             burgerCount.textContent = "Burgers: " + burgers;
             totalBurgerCount.textContent = "Total Burgers Made: " + totalBurgersMade;
@@ -120,7 +121,7 @@
         });
 
         badPaperStrawMachine.addEventListener("click", () => {
-            if (burgers > -1) {
+            if (burgers > 149) {
                 burgers += -150;
                 BPS += 1;
                 updateAllStats()
@@ -166,7 +167,6 @@
                 updateAllStats();
             }
         });
-        
 
 
         paperStraw.addEventListener("click", () => {
