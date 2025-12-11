@@ -1,18 +1,9 @@
-* {
-    border: 1px solid re
-}
-
 html {
     --text: #ffffff;
     --background: #000000;
     --primary: #79fbd0;
     --secondary: #ff9da5;
     --accent: #ff57ae;
-}
-
-*{
-    display: flex;
-  justify-content: center; 
 }
 
 ul,
@@ -26,7 +17,6 @@ body {
 }
 
 h1,
-h2,
 h3 {
     color: var(--secondary);
     font-family: "fugaz one";
@@ -56,16 +46,15 @@ audio {
     border-radius: 40px;
 }
 
-ul {
-    text-decoration: wavy underline;
+a:link {
+    color: hotpink 
 }
 
 ul,
 ol {
     color: var(--secondary);
     font-family: "lexend";
-    font-variant: small-caps;
-
+    font-weight: 200;
 }
 
 p {
