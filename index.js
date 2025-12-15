@@ -3,7 +3,7 @@ const backBtn = document.getElementById("backBtn");
 const homeBtn = document.getElementById("homeBtn");
 
 backBtn.addEventListener("click", () => {
-javascript:history.back(-1);
+history.back(-1);
 });
 
 homeBtn.addEventListener("click", () => {

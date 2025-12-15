@@ -11,24 +11,25 @@ li {
     color: var(--accent)
 }
 
-.backAndHomeBtn *{
-color:var(--accent);
-display: flex;
-align-items:flex-end;
+.backAndHomeBtn * {
+    color: var(--accent);
+    display: flex;
+    align-items: flex-end;
 }
 
 .backAndHomeBtn {
     position: fixed;
     top: 20px;
     right: 20px;
-    display: flex; 
+    display: flex;
     gap: 10px;
-    align-items: flex-start; 
+    align-items: flex-start;
 }
 
-body:not(.backAndHomeBtn){
+body:not(.backAndHomeBtn) {
     color: var(--text);
     background: var(--background);
+max-width: 700px;
 }
 
 h1,
@@ -62,7 +63,7 @@ audio {
 }
 
 a:link {
-    color: hotpink 
+    color: hotpink
 }
 
 ul,
