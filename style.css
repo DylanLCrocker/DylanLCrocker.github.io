@@ -6,11 +6,6 @@ html {
     --accent: #ff57ae;
 }
 
-ul,
-li {
-    color: var(--accent)
-}
-
 .backAndHomeBtn * {
     color: var(--accent);
     display: flex;
@@ -29,7 +24,7 @@ li {
 body:not(.backAndHomeBtn) {
     color: var(--text);
     background: var(--background);
-max-width: 700px;
+    max-width: 700px;
 }
 
 h1,
@@ -63,7 +58,7 @@ audio {
 }
 
 a:link {
-    color: hotpink
+    color: var(--primary)
 }
 
 ul,
@@ -71,6 +66,12 @@ ol {
     color: var(--secondary);
     font-family: "lexend";
     font-weight: 200;
+}
+
+.button-style {
+    color: var(--primary);
+    border-width: 0px;
+    background-color: #000000;
 }
 
 p {
